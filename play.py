@@ -47,7 +47,7 @@ class MainPage(Handler):
         visit += 1
         
         new_cookie_val = make_secure_val(str(visit))
-        self.response.headers.add_header('Set-Cookie', 'visits=%s' % new_cookie_val)
+        self.response.headers.add_header('Set-Cookie', 'visit=%s' % new_cookie_val)
         
         if visit>10000:
             self.write("You are the best ever!!")
